@@ -1,7 +1,7 @@
 //file:noinspection JCenterRepository
 //file:noinspection GrDeprecatedAPIUsage
 plugins {
-    id 'fabric-loom' version '1.1-SNAPSHOT'
+    id 'fabric-loom' version '1.2-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -39,14 +39,17 @@ dependencies {
     mappings "net.fabricmc:yarn:${project.yarn_version}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
+    // Fabric
+    mappings "net.fabricmc:yarn:${project.yarn_version}:v2"
+    modImplementation "net.fabricmc:fabric-loom:0.4.8"
+
     // Meteor
-    modImplementation "meteordevelopment:meteor-client:${project.meteor_version}"
+    modImplementation "meteordevelopment:meteor-client:${project.meteor_version}-SNAPSHOT"
     modImplementation "baritone:fabric:${project.minecraft_version}-SNAPSHOT"
 
     //litematica
     modImplementation "curse.maven:litematica-${project.litematica_projectid}:${project.litematica_fileid}"
-    modImplementation "fi.dy.masa.malilib:malilib-fabric-${project.minecraft_version}:${project.malilib_version}"
-
+    modImplementation"fi.dy.masa.malilib:malilib-fabric-${malilib_version}"
 }
 
 processResources {

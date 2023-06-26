@@ -10,7 +10,6 @@ import org.apache.logging.log4j.Logger;
 
 public class Addon extends MeteorAddon {
 	public static final Logger LOG = LogManager.getLogger();
-	public static final Category CATEGORY = new Category("Printer", new ItemStack(Items.PINK_CARPET));
 
 	@Override
 	public void onInitialize() {
@@ -25,8 +24,4 @@ public class Addon extends MeteorAddon {
         return "com.kkllffaa.meteor_litematica_printer";
     }
 
-	@Override
-	public void onRegisterCategories() {
-		Modules.registerCategory(CATEGORY);
-	}
 }
